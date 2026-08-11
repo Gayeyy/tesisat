@@ -1,0 +1,6 @@
+# Tüm arama motorlarına izin ver
+User-agent: *
+Allow: /
+
+# Sitemap konumu
+Sitemap: https://firtinasukacaktespiti.com/sitemap.xml

@@ -11,8 +11,36 @@ tesisat/
 │   └── style.css     → Tüm tasarım / stiller
 ├── js/
 │   └── script.js     → Menü, animasyon, yukarı çık butonu
+├── sitemap.xml       → Arama motorları site haritası
+├── robots.txt        → Tarayıcı kuralları + sitemap bildirimi
+├── og-image.jpg      → Sosyal medya paylaşımda çıkan görsel (1200x630)
+├── firtina-web-sitesi.html → Tek dosyalık teslim sürümü (WhatsApp için)
 └── README.md
 ```
+
+## 🔍 SEO (Arama Motoru Optimizasyonu)
+Aşağıdaki SEO dosyaları ve etiketleri eklenmiştir:
+
+- **sitemap.xml** → Google'a site yapısını bildirir. Domain yayına alındıktan sonra
+  `https://firtinasukacaktespiti.com/sitemap.xml` adresinden erişilebilir.
+- **robots.txt** → Arama motorlarına izin verir ve sitemap'i tanıtır.
+- **og-image.jpg** → Site linki WhatsApp/Facebook/Instagram'da paylaşıldığında çıkan görsel.
+- **JSON-LD (LocalBusiness)** → `index.html` ve `firtina-web-sitesi.html` `<head>` içinde gömülüdür.
+  Google'a işletmenin adını, telefonunu, bölgesini ve çalışma saatlerini yapısal olarak bildirir.
+  → "Rize su tesisatçısı" gibi aramalarda Google Haritalar & bilgi kutusunda çıkmayı kolaylaştırır.
+- **Meta etiketleri**: canonical, robots, Open Graph (Facebook), Twitter Card, theme-color,
+  geo (Rize konumu) eklendi.
+
+### Domain değişirse ne yapmalı?
+Tüm etiketler `https://firtinasukacaktespiti.com` domain'ine göre yazıldı. Domain değişirse
+`index.html` ve `firtina-web-sitesi.html` içinde `firtinasukacaktespiti.com`'u yeni domain ile
+arat-değiştir yap, ayrıca `sitemap.xml` ve `robots.txt` içindeki URL'leri de güncelle.
+
+### Google'a siteyi tanıtmak (canlıya aldıktan sonra)
+1. [Google Search Console](https://search.google.com/search-console) → site ekle → sahiplik doğrula.
+2. "Sitemap" bölümünden `sitemap.xml` gönder.
+3. [Google Business Profile](https://www.google.com/business) → ücretsiz işletme kaydı aç
+   (haritada çıkmak için en önemli adım).
 
 ## 🚀 Nasıl Yayınlanır?
 - **Yerelde önizleme:** `index.html` dosyasına çift tıklayarak tarayıcıda açabilirsiniz.
