@@ -42,6 +42,29 @@ arat-değiştir yap, ayrıca `sitemap.xml` ve `robots.txt` içindeki URL'leri de
 3. [Google Business Profile](https://www.google.com/business) → ücretsiz işletme kaydı aç
    (haritada çıkmak için en önemli adım).
 
+## ⚠️ Canlıya Atmadan Önce: Google Kodlarını Değiştir (YER TUTUCU)
+`index.html` ve `firtina-web-sitesi.html` `<head>` başında **yer tutucu** kodlar var.
+Hesapları açıp gerçek kodları buraya yapıştır — yoksa Search Console doğrulanmaz ve Analytics
+saymaz.
+
+### 1) Search Console doğrulama kodu
+```
+<meta name="google-site-verification" content="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+```
+- Search Console → mülk ekle → doğrulama yöntemi **"HTML etiketi"** → sana verdiği `content="..."`
+  içindeki uzun kodu `XXXX...XXX` yerine yapıştır.
+
+### 2) Google Analytics (GA4) — 2 yeri de değiştir
+```
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+...
+      gtag('config', 'G-XXXXXXXXXX');
+```
+- [analytics.google.com](https://analytics.google.com) → mülk ekle → sana verilen `G-XXXXXXXXXX`
+  kodunu **2 yere** (script src ve config satırı) yapıştır.
+
+> İpucu: Her iki dosyada da `G-XXXXXXXXXX` ve `XXXX` aratın → kaç yer geçtiğını görürsünüz.
+
 ## 🚀 Nasıl Yayınlanır?
 - **Yerelde önizleme:** `index.html` dosyasına çift tıklayarak tarayıcıda açabilirsiniz.
 - **Yayınlama:** Tüm klasörü herhangi bir hosting'e (cPanel, Hostinger, Netlify, GitHub Pages,
